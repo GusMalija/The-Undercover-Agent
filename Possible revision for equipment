@@ -1,0 +1,171 @@
+"""
+Created on Sun Nov  1 15:03:44 2020
+
+@author: jenpr
+"""
+
+print("Welcome to Undercover Agent – A mission to save the galaxy ")
+name=input("Insert your name")
+print ("Hello Agent",name)
+
+#Rules of the game 
+print("Here are rules of the game")
+print("Rule 1. The theme of the game is mysterious, pick equipments based on how you envision this adventurous game to go")
+print("Rule 2. The game escalates based on levels, each level will unlock as you finish one level")
+print("Rule 3. You will be awarded points based on how successful you are on every level of the game. The highest point is 5 and the lowest is 0")
+print("Rule 4. Once you start the game, you will have to finish it. There is not turning back")
+
+
+#About the game 
+print("About the Galaxy: The galaxy has been at peace for 100 years. But intelligence has been gathered indicating that there are forces trying to destroy that peace, and with it, the galaxy itself! Your mission is to travel the galaxy, make contacts and gather clues in order to stop their evil plan in its tracks and save the galaxy.")
+
+#Building the game 
+
+#Introduce ship
+class Ship:
+    #class variables:
+    __helptip = "The ship is your central hub for the game. Here you can look at your equipment inventory, find information about planets, get updates on your progress in the game, choose your mission and choose your equipment."
+    
+    #class constructor
+    def __init__(self, equipment, planets, status, missions, armory):
+        #instance variables
+        self.__name = name
+        self.__equipment = equipment
+        self.__planets = planets
+        self.__status = status
+        self.__misions = missions
+        self.__armory = armory 
+    
+    def setName(self,name):
+        self.__name = name
+    def getName(self):
+        return self.__name
+    
+    @classmethod
+    def helptp(cls):
+        return cls.__helptip
+
+class Item_Equipment: 
+    """
+    Equipent inventory: description attribute, and a method that returns the description
+    """
+    def __init__(self, name, description, isGoodFor, observe, audio, EnemyFights=False,isEvidence=False, Blade=False,isAlien=False, isDoorLocked=False, isAttractiveEnemyAlly=False):
+        self.__description= description
+        self.__name__ = name
+        self.__isGoodFor = []
+        self.__uses = []
+        self.__observe = observe
+        self.__EnemyFights = EnemyFights 
+        self.__Blade = Blade
+        self.__isAlien = isAlien
+        self.__isDoorLocked = isDoorLocked
+        self.__isAttractiveEnemyAlly = isAttractiveEnemyAlly
+        self.__audio = audio
+        self.__isEvidence = isEvidence
+        
+
+    def setName(self,name):
+        self.__name = name
+    def getName(self):
+        return self.__name 
+    
+    def introduceItem(self): 
+        print(self.__description)
+        return self.__description
+    
+    def whatFor(self):
+        print(self.__isGoodFor)
+        return self.__isGoodFor
+    
+
+   
+    #The agent has to pick equipment - actions
+       
+    def lookAt(self):
+      look = self.__description
+      if  self.__isDoorLocked:
+          look += " Unlock using the blade"
+      print(look)    
+            
+    def use(self):
+       if self.__EnemyFights:
+           print("Enemy is strong")
+           if self.__RayGun:
+             print("shoot him with a gun")
+           else:
+             print("reserve your gun")
+     
+    def Spray(self):
+        print(self.__observe)
+        if self.__isAlien:
+            print("Spray them with knock-out gas")
+        else:
+            print("knock-out gas is not a good option")
+            
+    def bribe (self):
+        if self.__isAttractiveEnemyAlly:
+            print("Decieve her with the necklace")
+        else:
+            print("Reserve that for another fine lady")
+        
+    def shoot(self):
+        if self.__EnemyFights:
+            print("shoot him with a gun")
+        else:
+            print("reserve your gun")
+    def record(self):
+        if self.__isEvidence:
+            if self.__audio:
+                print("Use your audio recorder")
+            else:
+                print("no audio evidence")
+                
+   #inspecting equipment - not yet picking
+
+equip_inventory = []
+
+item1 = Item_Equipment("Ray-Gun", "Versatile and strong weapon.", "Useful against all enemies.")
+item1.getName()
+item1.introduceItem()
+item1.whatFor()
+
+item2 = Item_Equipment("Blade", "Always sharp and easily hidden.", "Useful against weaker enemies and locked doors.")
+item2.getName()
+item2.introduceItem()
+item2.whatFor()
+
+item3 = Item_Equipment("Knock-Out Gas", "Aerosol that can stun and knock-out opponents.", "Useful for weakening opponents or sneaking past guards.")
+item3.getName()
+item3.introduceItem()
+item3.whatFor()
+
+item4 = Item_Equipment("Diamond Necklace", "Exceptionally shiny, worth a great deal on all planets.", "Useful for charming or bribing.")
+item4.getName()
+item4.introduceItem()
+item4.whatFor()
+
+item5 = Item_Equipment("Jeweled, titanium watch", "Watch made of prized metals and jewels.", "Useful for charming, bribing or telling time.")
+item5.getName()
+item5.introduceItem()
+item5.whatFor()
+
+item6 = Item_Equipment("Seeds", "Able to grow into edible plants in any soil.", "Useful if you get stuck without food.")
+item6.getName()
+item6.introduceItem()
+item6.whatFor()
+
+item7 = Item_Equipment("Fertilizer", "Can be used to speed up growth of seeds or strengthen explosions.", "Useful for quickly satisfying hunger or building a bigger bomb.")
+item7.getName()
+item7.introduceItem()
+item7.whatFor()
+
+item8 = Item_Equipment("Camera", "Bulky but capable of recording video and still photos.", "Useful for recording visual evidence, but can't be easily hidden.")
+item8.getName()
+item8.introduceItem()
+item8.whatFor()
+
+item9 = Item_Equipment("Audio-Recorder", "Small and capable of recording audio.", "Useful for recording audio evidence and can be easily hidden.")
+item9.getName()
+item9.introduceItem()
+item9.whatFor()
+
