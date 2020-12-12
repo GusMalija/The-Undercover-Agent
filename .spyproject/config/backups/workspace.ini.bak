@@ -1,0 +1,10 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+
+[main]
+version = 0.2.0
+recent_files = ['armory.py', 'Base.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\equipment_general.py', 'introduction.py', 'inventory.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\main_code_revised.py', 'planets.py', 'Possible revision for equipment.py', 'ship_class.py', 'slowprint.py', 'main_code_revised.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\slowprint.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\armory.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\Base.py', '..\\OneDrive\\Documents\\GitHub\\The-Undercover-Agent\\ship_class.py']
+
