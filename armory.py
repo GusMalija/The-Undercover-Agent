@@ -22,6 +22,8 @@ class Pick:
       self.__items.append(item)
     else: 
       print("Unfortunately, you can't pick more")
+    
+    
 
 """function to choose equipment items"""
 def fillBackpack():
@@ -37,3 +39,5 @@ def fillBackpack():
     choice3 = input("Make your third choice from the inventory list")
     print(choice3)
     backpack.addItem(choice3)
+    
+    

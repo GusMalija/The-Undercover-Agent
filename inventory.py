@@ -70,13 +70,13 @@ item9.introduceItem()
 item9.whatFor()
 equipInventory.append(item9)
 
-item10 = Item_equipment("\nDress Suit", "Profession suit of clothing.", "Useful for fancy parties and charming contacts.")
+item10 = Item_equipment("\nDress Suit", "Professional suit of clothing.", "Useful for fancy parties and charming contacts.")
 item10.category()
 item10.introduceItem()
 item10.whatFor()
 equipInventory.append(item10)
 
-item11 = Item_equipment("\nArmor", "Full defensive set of equipment.", "Import to defend yourself from attack while in search of clues.")
+item11 = Item_equipment("\nArmor", "Full defensive set of equipment.", "Important to defend yourself from attack while in search of clues.")
 item11.category()
 item11.introduceItem()
 item11.whatFor()
@@ -116,3 +116,4 @@ def printList():
     for object in equipInventory:
         object.printItem()
     input("\n\nPress the enter key to continue")
+

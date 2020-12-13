@@ -26,3 +26,8 @@ class Ship:
     @classmethod
     def helptp(cls):
         return cls.__helptip
+    
+"""function to indicate the user has returned to their ship"""
+def welcomeback():
+    print("Welcome back to your ship, Agent.")
+        

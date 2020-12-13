@@ -49,9 +49,9 @@ class Item_equipment:
     
     """function to print lists and items"""
     def printItem(self):
-        print(self.__name + "\n")
-        print(self.__description + "\n")
-        print(self.__isGoodFor)
+        slowdown(self.__name + "\n")
+        slowdown(self.__description + "\n")
+        slowdown(self.__isGoodFor)
         return self.__name, self.__description, self.__isGoodFor
     
   
